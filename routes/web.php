@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -18,3 +17,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Auth/Login');
 });
+
+Route::resource('companies', '\App\Http\Controllers\CompaniesController');
+Route::resource('buses', '\App\Http\Controllers\BusesController');
+Route::resource('trips', '\App\Http\Controllers\TripsController');
